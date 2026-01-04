@@ -463,3 +463,227 @@ a:hover {
     grid-template-columns: 1fr;
   }
 }
+/* 创作语境页样式 */
+.context-page {
+    padding: 40px 0;
+}
+
+.context-section {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.context-card {
+    background-color: var(--color-white);
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    padding: 30px;
+    transition: transform 0.3s ease;
+}
+
+.context-card:hover {
+    transform: translateY(-5px);
+}
+
+.card-title {
+    font-size: 1.5rem;
+    color: var(--color-primary);
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--color-light-gray);
+}
+
+.card-content {
+    line-height: 1.8;
+    color: var(--color-text);
+}
+
+.experience-timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.timeline-item h4 {
+    color: var(--color-secondary);
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+.context-quote {
+    margin: 25px 0;
+    padding: 20px;
+    background-color: var(--color-light-blue);
+    border-radius: 8px;
+    position: relative;
+}
+
+.quote-icon {
+    font-size: 3rem;
+    color: var(--color-primary-light);
+    position: absolute;
+    top: -10px;
+    left: 10px;
+    opacity: 0.6;
+}
+
+.context-quote p {
+    padding-left: 40px;
+    font-style: italic;
+    color: var(--color-text-dark);
+}
+
+.theme-connection {
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 1px dashed var(--color-light-gray);
+}
+
+.theme-connection h4 {
+    color: var(--color-secondary);
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+.work-origin {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.origin-item h4 {
+    color: var(--color-secondary);
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+/* 资源索引页样式 */
+.resources-page {
+    padding: 40px 0;
+}
+
+.resources-section {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.card-desc {
+    color: var(--color-text-gray);
+    margin-bottom: 20px;
+    font-size: 0.95rem;
+}
+
+.resources-list {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.resource-item {
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--color-light-gray);
+}
+
+.resource-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.resource-link {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    color: var(--color-primary);
+    text-decoration: none;
+    margin-bottom: 10px;
+    transition: color 0.3s ease;
+}
+
+.resource-link:hover {
+    color: var(--color-secondary);
+}
+
+.resource-title {
+    font-weight: 600;
+    font-size: 1.05rem;
+}
+
+.resource-author, .resource-platform {
+    font-size: 0.9rem;
+    color: var(--color-text-gray);
+}
+
+.resource-summary {
+    color: var(--color-text);
+    line-height: 1.7;
+    font-size: 0.95rem;
+}
+
+.add-more .resource-link {
+    color: var(--color-secondary);
+    font-style: italic;
+}
+
+.note-box {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: var(--color-light-gray);
+    border-radius: 8px;
+}
+
+.note-icon {
+    margin-right: 8px;
+}
+
+/* 响应式适配 */
+@media (max-width: 768px) {
+    .context-card, .resources-card {
+        padding: 20px;
+    }
+
+    .card-title {
+        font-size: 1.3rem;
+    }
+
+    .context-quote {
+        padding: 15px;
+    }
+
+    .quote-icon {
+        font-size: 2.5rem;
+    }
+
+    .context-quote p {
+        padding-left: 30px;
+    }
+
+    .experience-timeline, .work-origin {
+        gap: 20px;
+    }
+
+    .resources-list {
+        gap: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .page-header h2 {
+        font-size: 1.5rem;
+    }
+
+    .card-title {
+        font-size: 1.2rem;
+    }
+
+    .resource-title {
+        font-size: 1rem;
+    }
+
+    .resource-summary {
+        font-size: 0.9rem;
+    }
+}
