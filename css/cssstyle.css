@@ -687,3 +687,353 @@ a:hover {
         font-size: 0.9rem;
     }
 }
+/* ================================== 作品速览页（works.html）专属样式 ================================== */
+.works-page {
+    padding: 40px 0;
+}
+
+/* 面包屑导航 */
+.breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--color-text-gray);
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+}
+
+.breadcrumb-link {
+    color: var(--color-primary);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.breadcrumb-link:hover {
+    color: var(--color-secondary);
+}
+
+.breadcrumb-separator {
+    color: var(--color-light-gray);
+}
+
+/* 作品卡片容器 */
+.works-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin: 30px 0 50px;
+}
+
+/* 作品卡片样式 */
+.work-card {
+    background-color: var(--color-white);
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.work-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+/* 作品卡片图片区 */
+.work-card-img {
+    height: 220px;
+    overflow: hidden;
+    background-color: var(--color-light-gray);
+    position: relative;
+}
+
+.work-card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.work-card:hover .work-card-img img {
+    transform: scale(1.05);
+}
+
+/* 图片占位提示（加载失败时显示） */
+.img-placeholder {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-text-gray);
+    font-size: 0.9rem;
+    text-align: center;
+    padding: 20px;
+}
+
+/* 作品卡片内容区 */
+.work-card-content {
+    padding: 25px;
+}
+
+.card-title {
+    font-size: 1.3rem;
+    color: var(--color-primary);
+    margin-bottom: 15px;
+}
+
+.work-card-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    color: var(--color-text-gray);
+    font-size: 0.85rem;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid var(--color-light-gray);
+}
+
+.meta-item {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.card-desc {
+    color: var(--color-text);
+    line-height: 1.7;
+    margin-bottom: 20px;
+    font-size: 0.95rem;
+}
+
+/* 作品标签样式 */
+.work-card-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.work-tag {
+    background-color: var(--color-light-blue);
+    color: var(--color-primary);
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    transition: background-color 0.3s ease;
+}
+
+.work-tag:hover {
+    background-color: var(--color-primary-light);
+}
+
+/* 卡片按钮样式 */
+.card-btn {
+    display: inline-block;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.card-btn:hover {
+    background-color: var(--color-secondary);
+    transform: scale(1.03);
+    color: var(--color-white);
+}
+
+/* 作品对比区样式 */
+.works-compare {
+    background-color: var(--color-white);
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    padding: 30px;
+}
+
+.compare-title {
+    font-size: 1.2rem;
+    color: var(--color-primary);
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--color-light-gray);
+}
+
+.compare-content {
+    line-height: 1.8;
+    color: var(--color-text);
+    font-size: 0.95rem;
+}
+
+/* ================================== 资源索引页（resources.html）专属样式 ================================== */
+.resources-page {
+    padding: 40px 0;
+}
+
+/* 资源卡片容器 */
+.resources-section {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+/* 资源卡片通用样式 */
+.resources-card {
+    background-color: var(--color-white);
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    padding: 30px;
+    transition: transform 0.3s ease;
+}
+
+.resources-card:hover {
+    transform: translateY(-5px);
+}
+
+/* 资源卡片标题 */
+.card-title {
+    font-size: 1.5rem;
+    color: var(--color-primary);
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--color-light-gray);
+}
+
+/* 资源卡片描述 */
+.card-desc {
+    color: var(--color-text-gray);
+    margin-bottom: 20px;
+    font-size: 0.95rem;
+}
+
+/* 资源列表样式 */
+.resources-list {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.resource-item {
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--color-light-gray);
+}
+
+.resource-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+/* 资源链接样式 */
+.resource-link {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    color: var(--color-primary);
+    text-decoration: none;
+    margin-bottom: 10px;
+    transition: color 0.3s ease;
+}
+
+.resource-link:hover {
+    color: var(--color-secondary);
+}
+
+.resource-title {
+    font-weight: 600;
+    font-size: 1.05rem;
+}
+
+.resource-author, .resource-platform {
+    font-size: 0.9rem;
+    color: var(--color-text-gray);
+}
+
+/* 资源摘要样式 */
+.resource-summary {
+    color: var(--color-text);
+    line-height: 1.7;
+    font-size: 0.95rem;
+}
+
+/* 补充更多资源按钮 */
+.add-more .resource-link {
+    color: var(--color-secondary);
+    font-style: italic;
+    cursor: pointer;
+}
+
+/* 备注框样式 */
+.note-box {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: var(--color-light-gray);
+    border-radius: 8px;
+}
+
+.note-icon {
+    margin-right: 8px;
+}
+
+/* ================================== 响应式适配（统一补充） ================================== */
+@media (max-width: 768px) {
+    /* 作品速览页响应式 */
+    .works-container {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .work-card-img {
+        height: 180px;
+    }
+
+    .work-card-content {
+        padding: 20px;
+    }
+
+    .works-compare {
+        padding: 20px;
+    }
+
+    /* 资源索引页响应式 */
+    .resources-card {
+        padding: 20px;
+    }
+
+    .resources-list {
+        gap: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* 作品速览页响应式 */
+    .page-header h2 {
+        font-size: 1.5rem;
+    }
+
+    .card-title {
+        font-size: 1.2rem;
+    }
+
+    .work-card-meta {
+        gap: 8px;
+    }
+
+    .card-btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* 资源索引页响应式 */
+    .resource-title {
+        font-size: 1rem;
+    }
+
+    .resource-summary {
+        font-size: 0.9rem;
+    }
+}
